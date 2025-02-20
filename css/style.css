@@ -1,4 +1,170 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+.letter, .letter-text {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+  z-index: 2;
+}
+
+/* Modified to give the logo text the logo background */
+.logo {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: none;
+  background-image: url(/img/logo.png);
+  z-index: 2;
+  filter: drop-shadow(0.5mm 0.5mm black);
+}
+
+/* Your CSS below here */
+
+
+
+/* Places top-image at the top of the letter */
+.top {
+  position: absolute;
+  top: 0;
+  width: 210mm;
+  height: 37.5mm;
+  background-color: white;
+  background-image: 
+    url(/img/top-image.png),
+    linear-gradient(
+      lightgrey 10%,
+      white 96%
+    );
+  border-top: 1mm solid red;
+  z-index: 1;
+}
+
+/* Places bottom-image at the bottom of the letter */
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 210mm;
+  height: 38mm;
+  background-color: white;
+  background-image: 
+    url(/img/bottom-image.png),
+    linear-gradient(
+      to top,
+      lightgrey 10%,
+      white 96%
+    );
+  border-bottom: 1mm solid red;
+  z-index: 1;
+}
+
+/* Sets the rest of the letter background to white */
+.letter-text {
+  padding: 60mm 21mm 55mm 21mm;
+  background-color: white;
+}
+
+/* Centers text above horizontal line */
+.text-top {
+  text-align: center;
+}
+
+
+/* Styles first quote under the h1 element */
+.first-quote {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-bottom: 1mm;
+}
+
+/* Styles second quote under the h1 element */
+.second-quote {
+  margin-top: 0;
+  font-size: 0.6rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+hr {
+  margin: 0;
+}
+
+/* Turns the rest of the text into two columns */
+
+.text-bottom {
+  display: flex;
+  gap: 2mm
+}
+
+p, label, button, legend {
+  font-size: 0.7rem;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+h1, h2 {
+  font-family: Dauphin;
+}
+
+#top-header {
+  margin-top: 3mm;
+}
+
+/* Checkbox styling */
+.checkbox {
+  display: flex;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border-radius: 8px;
+  height: 1.5rem;
+  margin-top: 10mm;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

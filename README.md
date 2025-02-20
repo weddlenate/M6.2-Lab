@@ -1,4 +1,4 @@
-# web-dev-starter
+# Letterheaded Paper Template
 
 This is a starter project for web development with no frameworks and minimal
 dependencies. It is intended to be a starting point for web development projects
